@@ -3,7 +3,6 @@
 namespace VueGenerators\Commands;
 
 use Illuminate\Filesystem\Filesystem;
-use VueGenerators\Commands\VueGeneratorsCommand;
 
 class MakeMixin extends VueGeneratorsCommand
 {
@@ -44,8 +43,8 @@ class MakeMixin extends VueGeneratorsCommand
     /**
      * Get and return stub.
      *
-     * @param  Filesystem $filesystem
-     * 
+     * @param Filesystem $filesystem
+     *
      * @return string
      */
     protected function getStub(Filesystem $filesystem)

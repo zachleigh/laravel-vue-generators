@@ -9,12 +9,12 @@ use Illuminate\Filesystem\Filesystem;
 class VueGeneratorsCommand extends Command
 {
     use Paths;
-    
+
     /**
      * Create path for file.
      *
-     * @param  Filesystem $filesystem
-     * 
+     * @param Filesystem $filesystem
+     *
      * @return string
      */
     protected function createPath(Filesystem $filesystem)

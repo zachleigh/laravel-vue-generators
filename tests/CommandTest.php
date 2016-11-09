@@ -3,7 +3,6 @@
 namespace VueGenerators\tests;
 
 use Artisan;
-use Illuminate\Filesystem\Filesystem;
 
 class CommandTest extends TestCase
 {
@@ -17,8 +16,8 @@ class CommandTest extends TestCase
         $this->assertFileNotExists($file);
 
         Artisan::call('vueg:component', [
-            'name' => 'NewComponent',
-            '--empty' => true
+            'name'    => 'NewComponent',
+            '--empty' => true,
         ]);
 
         $this->assertFileExists($file);
@@ -34,8 +33,8 @@ class CommandTest extends TestCase
         $this->assertFileNotExists($file);
 
         Artisan::call('vueg:component', [
-            'name' => 'NewComponent',
-            '--empty' => true
+            'name'    => 'NewComponent',
+            '--empty' => true,
         ]);
 
         $this->assertFileEquals(__DIR__.'/../src/Stubs/EmptyComponent.vue', $file);
@@ -51,7 +50,7 @@ class CommandTest extends TestCase
         $this->assertFileNotExists($file);
 
         Artisan::call('vueg:component', [
-            'name' => 'NewComponent'
+            'name' => 'NewComponent',
         ]);
 
         $this->assertFileEquals(__DIR__.'/../src/Stubs/Component.vue', $file);
@@ -67,8 +66,8 @@ class CommandTest extends TestCase
         $this->assertFileNotExists($file);
 
         Artisan::call('vueg:component', [
-            'name' => 'NewComponent',
-            '--path' => 'custom.path'
+            'name'   => 'NewComponent',
+            '--path' => 'custom.path',
         ]);
 
         $this->assertFileExists($file);
@@ -84,8 +83,8 @@ class CommandTest extends TestCase
         $this->assertFileNotExists($file);
 
         Artisan::call('vueg:mixin', [
-            'name' => 'NewMixin',
-            '--empty' => true
+            'name'    => 'NewMixin',
+            '--empty' => true,
         ]);
 
         $this->assertFileExists($file);
@@ -101,8 +100,8 @@ class CommandTest extends TestCase
         $this->assertFileNotExists($file);
 
         Artisan::call('vueg:mixin', [
-            'name' => 'NewMixin',
-            '--empty' => true
+            'name'    => 'NewMixin',
+            '--empty' => true,
         ]);
 
         $this->assertFileEquals(__DIR__.'/../src/Stubs/EmptyMixin.js', $file);
@@ -134,8 +133,8 @@ class CommandTest extends TestCase
         $this->assertFileNotExists($file);
 
         Artisan::call('vueg:mixin', [
-            'name' => 'NewMixin',
-            '--path' => 'custom.path'
+            'name'   => 'NewMixin',
+            '--path' => 'custom.path',
         ]);
 
         $this->assertFileExists($file);

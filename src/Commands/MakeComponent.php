@@ -2,9 +2,7 @@
 
 namespace VueGenerators\Commands;
 
-use VueGenerators\Paths;
 use Illuminate\Filesystem\Filesystem;
-use VueGenerators\Commands\VueGeneratorsCommand;
 
 class MakeComponent extends VueGeneratorsCommand
 {
@@ -45,8 +43,8 @@ class MakeComponent extends VueGeneratorsCommand
     /**
      * Get and return stub.
      *
-     * @param  Filesystem $filesystem
-     * 
+     * @param Filesystem $filesystem
+     *
      * @return string
      */
     protected function getStub(Filesystem $filesystem)
