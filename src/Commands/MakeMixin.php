@@ -37,7 +37,7 @@ class MakeMixin extends VueGeneratorsCommand
 
         $filesystem->put($fullPath, $stub);
 
-        $this->info("Component {$name} succesfully created.");
+        $this->info("Mixin {$name} succesfully created.");
     }
 
     /**
