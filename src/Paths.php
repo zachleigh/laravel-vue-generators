@@ -9,8 +9,8 @@ trait Paths
     /**
      * Build directory tree from array of paths.
      *
-     * @param  array           $pathArray
-     * @param  Filesystem|null $filesystem
+     * @param array           $pathArray
+     * @param Filesystem|null $filesystem
      */
     protected function buildPathFromArray(array $pathArray, Filesystem $filesystem = null)
     {
