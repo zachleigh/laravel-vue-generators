@@ -8,6 +8,7 @@
 ### Contents
   - [Install](#install)
   - [Usage](#usage)
+  - [Configuration](#configuration)
   - [Testing](#testing)
   - [Contributing](#contributing)
 
@@ -74,6 +75,15 @@ By default, all mixins will be saved in resources/assets/js/mixins/. Specify a c
 php artisan vueg:mixin MyMixin --path=assets/js/custom/folder
 ``` 
 Will create a file called MyMixin.vue at resources/assets/js/custom/folder/MyMixin.vue.
+
+### Configuration
+Set default paths for components and mixins. All paths are relative to Laravel's resources directory.
+```php
+'paths' => [
+    'components' => 'path/to/components',
+    'mixins'     => 'path/to/mixins',
+]
+```
 
 ### Testing
 ```
