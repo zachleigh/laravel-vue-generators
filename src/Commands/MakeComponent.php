@@ -11,7 +11,7 @@ class MakeComponent extends VueGeneratorsCommand
      *
      * @var string
      */
-    protected $signature = 'vueg:component {name} {--empty} {--path=assets.js.components}';
+    protected $signature = 'vueg:component {name} {--empty} {--path=}';
 
     /**
      * The console command description.
@@ -29,7 +29,7 @@ class MakeComponent extends VueGeneratorsCommand
 
         $name = $this->argument('name').'.vue';
 
-        $path = $this->createPath($filesystem);
+        $path = $this->createPath($filesystem, 'component');
 
         $fullPath = resource_path("{$path}/{$name}");
 

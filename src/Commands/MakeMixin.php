@@ -11,7 +11,7 @@ class MakeMixin extends VueGeneratorsCommand
      *
      * @var string
      */
-    protected $signature = 'vueg:mixin {name} {--empty} {--path=assets.js.mixins}';
+    protected $signature = 'vueg:mixin {name} {--empty} {--path=}';
 
     /**
      * The console command description.
@@ -29,7 +29,7 @@ class MakeMixin extends VueGeneratorsCommand
 
         $name = $this->argument('name').'.js';
 
-        $path = $this->createPath($filesystem);
+        $path = $this->createPath($filesystem, 'mixin');
 
         $fullPath = resource_path("{$path}/{$name}");
 

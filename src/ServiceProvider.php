@@ -25,7 +25,9 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/config.php' => config_path('vue-generators.php'),
+        ], 'config');
     }
 
     /**

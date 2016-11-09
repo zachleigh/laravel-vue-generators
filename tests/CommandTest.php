@@ -67,7 +67,25 @@ class CommandTest extends TestCase
 
         Artisan::call('vueg:component', [
             'name'   => 'NewComponent',
-            '--path' => 'custom.path',
+            '--path' => 'custom/path',
+        ]);
+
+        $this->assertFileExists($file);
+    }
+
+    /**
+     * @test
+     */
+    public function it_saves_componets_to_path_set_in_config()
+    {
+        app()['config']->set('vue-generators.paths.components', 'custom/path');
+
+        $file = resource_path('custom/path/NewComponent.vue');
+
+        $this->assertFileNotExists($file);
+
+        Artisan::call('vueg:component', [
+            'name'   => 'NewComponent',
         ]);
 
         $this->assertFileExists($file);
@@ -134,7 +152,25 @@ class CommandTest extends TestCase
 
         Artisan::call('vueg:mixin', [
             'name'   => 'NewMixin',
-            '--path' => 'custom.path',
+            '--path' => 'custom/path',
+        ]);
+
+        $this->assertFileExists($file);
+    }
+
+    /**
+     * @test
+     */
+    public function it_saves_mixins_to_path_set_in_config()
+    {
+        app()['config']->set('vue-generators.paths.mixins', 'custom/path');
+
+        $file = resource_path('custom/path/NewMixin.js');
+
+        $this->assertFileNotExists($file);
+
+        Artisan::call('vueg:mixin', [
+            'name'   => 'NewMixin',
         ]);
 
         $this->assertFileExists($file);

@@ -19,14 +19,18 @@ composer require zachleigh/laravel-vue-generators
 In Laravel's config/app.php file, add the service provider to the array with the 'providers' key.
 ```
 VueGenerators\ServiceProvider::class
-```    
+```
+Publish the config file:
+```
+php artisan vendor:publish --provider="VueGenerators\ServiceProvider"
+```
 
 ### Usage
 This package currently contains two commands: `component` and `mixin`.      
 #### component
 Create a Vue js component file.
 ```
-php artisan vueg:component {name} {--empty} {--path=assets.js.components}
+php artisan vueg:component {name} {--empty} {--path=}
 ```
 ###### name
 Name of the component.
@@ -41,16 +45,16 @@ php artisan vueg:component MyComponent --empty
 ```
 Will create a file with no component methods.
 ###### path
-By default, all components will be saved in resources/assets/js/components/. Specify a custom, period divide path with the path flag. Path root is in resources/.
+By default, all components will be saved in resources/assets/js/components/. Specify a custom path with the path flag. Path root is in resources/.
 ```
-php artisan vueg:component MyComponent --path=assets.js.custom.folder
+php artisan vueg:component MyComponent --path=assets/js/custom/folder
 ``` 
 Will create a file called MyComponent.vue at resources/assets/js/custom/folder/MyComponent.vue.
 
 #### mixin
 Create a Vue js mixin file.
 ```
-php artisan vueg:mixin {name} {--empty} {--path=assets.js.mixins}
+php artisan vueg:mixin {name} {--empty} {--path=}
 ```
 ###### name
 Name of the mixin.
@@ -65,9 +69,9 @@ php artisan vueg:mixin MyMixin --empty
 ```
 Will create a file with no mixin methods.
 ###### path
-By default, all mixins will be saved in resources/assets/js/mixins/. Specify a custom, period divide path with the path flag. Path root is in resources/.
+By default, all mixins will be saved in resources/assets/js/mixins/. Specify a custom path with the path flag. Path root is in resources/.
 ```
-php artisan vueg:mixin MyMixin --path=assets.js.custom.folder
+php artisan vueg:mixin MyMixin --path=assets/js/custom/folder
 ``` 
 Will create a file called MyMixin.vue at resources/assets/js/custom/folder/MyMixin.vue.
 

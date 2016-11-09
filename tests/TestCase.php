@@ -33,6 +33,14 @@ class TestCase extends IlluminateTestCase
      */
     protected function setUp()
     {
+        $filesystem = new Filesystem();
+
+        $configDir = __DIR__.'./../src/config.php';
+
+        $configTarget = __DIR__.'./../vendor/laravel/laravel/config/vue-generators.php';
+
+        $filesystem->copy($configDir, $configTarget);
+
         parent::setUp();
     }
 
@@ -45,7 +53,7 @@ class TestCase extends IlluminateTestCase
 
         $filesystem->deleteDirectory(resource_path());
 
-        $this->buildPathFromArray(explode('.', 'assets.js.components'));
+        $this->buildPathFromArray('assets/js/components');
 
         parent::tearDown();
     }

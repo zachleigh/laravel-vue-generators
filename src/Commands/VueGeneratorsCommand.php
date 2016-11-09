@@ -14,17 +14,20 @@ class VueGeneratorsCommand extends Command
      * Create path for file.
      *
      * @param Filesystem $filesystem
+     * @param string     $type       File type.
      *
      * @return string
      */
-    protected function createPath(Filesystem $filesystem)
+    protected function createPath(Filesystem $filesystem, $type)
     {
-        $path = $this->option('path');
+        $customPath = $this->option('path');
 
-        $pathArray = explode('.', $path);
+        $defaultPath = config("vue-generators.paths.{$type}s");
 
-        $this->buildPathFromArray($pathArray, $filesystem);
+        $path = $customPath !== null ? $customPath : $defaultPath;
 
-        return implode('/', $pathArray);
+        $this->buildPathFromArray($path, $filesystem);
+
+        return $path;
     }
 }
