@@ -1,7 +1,7 @@
 export default {
     components: {},
 
-    data: function () {
+    data () {
         return {
             //
         }

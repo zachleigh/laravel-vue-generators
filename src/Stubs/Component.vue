@@ -8,7 +8,7 @@
 
         mixins: [],
 
-        data: function () {
+        data () {
             return {
                 //
             }
