@@ -1,6 +1,7 @@
 {
     "name": "zachleigh/laravel-vue-generators",
     "description": "Generate Vue js files via artisan commands.",
+    "keywords" : ["laravel", "vue", "generators"],
     "type": "project",
     "license": "MIT",
     "authors": [
