@@ -14,20 +14,16 @@ trait Paths
      */
     protected function buildPathFromArray($path, Filesystem $filesystem = null)
     {
-        $pathArray = explode('/', $path);
+        $pathArray = collect(explode('/', $path))->prepend('resources');
 
         if (is_null($filesystem)) {
             $filesystem = new Filesystem();
         }
 
-        $base = '/';
+        $base = base_path();
 
-        $resourceArray = explode('/', resource_path());
-
-        $all = collect($resourceArray)->merge($pathArray);
-
-        foreach ($all as $dir) {
-            $base = $base.'/'.$dir;
+        foreach ($pathArray as $path) {
+            $base = $base.'/'.$path;
 
             if (!$filesystem->exists($base)) {
                 $filesystem->makeDirectory($base);
