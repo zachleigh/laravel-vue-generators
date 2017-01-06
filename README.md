@@ -1,7 +1,8 @@
 # Laravel Vue Generators   
 [![Build Status](https://travis-ci.org/zachleigh/laravel-vue-generators.svg?branch=master)](https://travis-ci.org/zachleigh/laravel-vue-generators)
-[![Latest Stable Version](https://poser.pugx.org/zachleigh/laravel-vue-generators/version.svg)](//packagist.org/packages/zachleigh/laravel-vue-generators)
 [![StyleCI](https://styleci.io/repos/73324143/shield?style=flat)](https://styleci.io/repos/72352058)
+[![Latest Stable Version](https://poser.pugx.org/zachleigh/laravel-vue-generators/version.svg)](//packagist.org/packages/zachleigh/laravel-vue-generators)
+[![Total Downloads](https://poser.pugx.org/zachleigh/laravel-vue-generators/downloads)](https://packagist.org/packages/zachleigh/laravel-vue-generators)
 [![License](https://poser.pugx.org/zachleigh/laravel-vue-generators/license.svg)](//packagist.org/packages/zachleigh/laravel-vue-generators)  
 ##### Generate Vue js file stubs via artisan commands. 
 
