@@ -6,9 +6,9 @@ use VueGenerators\Paths;
 use VueGenerators\ServiceProvider;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Contracts\Console\Kernel;
-use Illuminate\Foundation\Testing\TestCase as IlluminateTestCase;
+use Laravel\BrowserKitTesting\TestCase as BaseTestCase;
 
-class TestCase extends IlluminateTestCase
+class TestCase extends BaseTestCase
 {
     use Paths;
 
