@@ -7,11 +7,19 @@
 ##### Generate Vue js file stubs via artisan commands. 
 
 ### Contents
+  - [Upgrade Information](#upgrade-information)
   - [Install](#install)
   - [Usage](#usage)
   - [Configuration](#configuration)
   - [Testing](#testing)
   - [Contributing](#contributing)
+
+### Upgrade Information
+#### Version 0.1.* to Version 0.2.0
+Version 0.2.0 adds Laravel 5.4 support. For Laravel 5.3, please use [Version 0.1.4](https://github.com/zachleigh/laravel-vue-generators/tree/v0.1.4):
+```
+composer require zachleigh/laravel-vue-generators:0.1.*
+```
 
 ### Install
 Install via composer:
