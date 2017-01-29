@@ -1,0 +1,7 @@
+build:
+    environment:
+        php:
+            version: 7.0.8
+
+filter:
+    excluded_paths: [tests/*, src/Stubs/*]

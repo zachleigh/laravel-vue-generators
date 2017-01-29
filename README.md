@@ -1,9 +1,12 @@
 # Laravel Vue Generators   
-[![Build Status](https://travis-ci.org/zachleigh/laravel-vue-generators.svg?branch=master)](https://travis-ci.org/zachleigh/laravel-vue-generators)
+[![Latest Stable Version](https://img.shields.io/packagist/v/zachleigh/laravel-vue-generators.svg)](//packagist.org/packages/zachleigh/laravel-vue-generators)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](//packagist.org/packages/zachleigh/laravel-vue-generators) 
+[![Build Status](https://img.shields.io/travis/zachleigh/laravel-vue-generators/master.svg)](https://travis-ci.org/zachleigh/laravel-vue-generators)
+[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/793f180c-dab8-40e3-a877-6387dd4db77e.svg)](https://insight.sensiolabs.com/projects/793f180c-dab8-40e3-a877-6387dd4db77e)
+[![Quality Score](https://img.shields.io/scrutinizer/g/zachleigh/laravel-vue-generators.svg)](https://scrutinizer-ci.com/g/zachleigh/laravel-vue-generators/)
 [![StyleCI](https://styleci.io/repos/73324143/shield?style=flat)](https://styleci.io/repos/72352058)
-[![Latest Stable Version](https://poser.pugx.org/zachleigh/laravel-vue-generators/version.svg)](//packagist.org/packages/zachleigh/laravel-vue-generators)
-[![Total Downloads](https://poser.pugx.org/zachleigh/laravel-vue-generators/downloads)](https://packagist.org/packages/zachleigh/laravel-vue-generators)
-[![License](https://poser.pugx.org/zachleigh/laravel-vue-generators/license.svg)](//packagist.org/packages/zachleigh/laravel-vue-generators)  
+[![Total Downloads](https://img.shields.io/packagist/dt/zachleigh/laravel-vue-generators.svg)](https://packagist.org/packages/zachleigh/laravel-vue-generators)
+ 
 ##### Generate Vue js file stubs via artisan commands. 
 
 ### Contents
