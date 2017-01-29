@@ -33,6 +33,8 @@ class MakeComponent extends VueGeneratorsCommand
 
         $fullPath = resource_path("{$path}/{$name}");
 
+        $this->checkFileExists($filesystem, $fullPath, $name);
+
         $stub = $this->getStub($filesystem);
 
         $filesystem->put($fullPath, $stub);

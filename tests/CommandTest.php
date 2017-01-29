@@ -76,7 +76,7 @@ class CommandTest extends TestCase
     /**
      * @test
      */
-    public function it_saves_componets_to_path_set_in_config()
+    public function it_saves_components_to_path_set_in_config()
     {
         app()['config']->set('vue-generators.paths.components', 'custom/path');
 
@@ -89,6 +89,27 @@ class CommandTest extends TestCase
         ]);
 
         $this->assertFileExists($file);
+    }
+
+    /**
+     * @test
+     *
+     * @expectedException VueGenerators\Exceptions\ResourceAlreadyExists
+     * @expectedExceptionMessage File NewComponent.vue already exists at path.
+     */
+    public function it_doesnt_overwrite_components_that_already_exist()
+    {
+        $file = resource_path('assets/js/components/NewComponent.vue');
+
+        Artisan::call('vueg:component', [
+            'name'   => 'NewComponent'
+        ]);
+
+        $this->assertFileExists($file);
+
+        Artisan::call('vueg:component', [
+            'name'   => 'NewComponent'
+        ]);
     }
 
     /**
@@ -174,5 +195,26 @@ class CommandTest extends TestCase
         ]);
 
         $this->assertFileExists($file);
+    }
+
+    /**
+     * @test
+     *
+     * @expectedException VueGenerators\Exceptions\ResourceAlreadyExists
+     * @expectedExceptionMessage File NewMixin.js already exists at path.
+     */
+    public function it_doesnt_overwrite_mixin_that_already_exist()
+    {
+        $file = resource_path('assets/js/mixins/NewMixin.js');
+
+        Artisan::call('vueg:mixin', [
+            'name'   => 'NewMixin'
+        ]);
+
+        $this->assertFileExists($file);
+
+        Artisan::call('vueg:mixin', [
+            'name'   => 'NewMixin'
+        ]);
     }
 }

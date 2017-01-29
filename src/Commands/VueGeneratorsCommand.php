@@ -5,6 +5,7 @@ namespace VueGenerators\Commands;
 use VueGenerators\Paths;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
+use VueGenerators\Exceptions\ResourceAlreadyExists;
 
 class VueGeneratorsCommand extends Command
 {
@@ -29,5 +30,12 @@ class VueGeneratorsCommand extends Command
         $this->buildPathFromArray($path, $filesystem);
 
         return $path;
+    }
+
+    protected function checkFileExists(Filesystem $filesystem, $path, $name)
+    {
+        if ($filesystem->exists($path)) {
+            throw ResourceAlreadyExists::fileExists($name);
+        }
     }
 }
