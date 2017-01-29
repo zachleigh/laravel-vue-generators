@@ -102,13 +102,13 @@ class CommandTest extends TestCase
         $file = resource_path('assets/js/components/NewComponent.vue');
 
         Artisan::call('vueg:component', [
-            'name'   => 'NewComponent'
+            'name'   => 'NewComponent',
         ]);
 
         $this->assertFileExists($file);
 
         Artisan::call('vueg:component', [
-            'name'   => 'NewComponent'
+            'name'   => 'NewComponent',
         ]);
     }
 
@@ -208,13 +208,13 @@ class CommandTest extends TestCase
         $file = resource_path('assets/js/mixins/NewMixin.js');
 
         Artisan::call('vueg:mixin', [
-            'name'   => 'NewMixin'
+            'name'   => 'NewMixin',
         ]);
 
         $this->assertFileExists($file);
 
         Artisan::call('vueg:mixin', [
-            'name'   => 'NewMixin'
+            'name'   => 'NewMixin',
         ]);
     }
 }
