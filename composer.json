@@ -12,12 +12,12 @@
     ],
     
     "require": {
-        "php": ">=5.6.0",
+        "php": ">=7.0",
         "laravel/browser-kit-testing": "^1.0"
     },
 
     "require-dev": {
-        "laravel/laravel": "5.4.*",
+        "laravel/laravel": "5.7.*",
         "phpunit/phpunit": "~4.0"
     },
 
